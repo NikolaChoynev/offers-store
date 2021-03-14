@@ -4,7 +4,7 @@ const config = {
     development: {
         port: process.env.PORT || 8000,
         dbURL: 'mongodb://localhost:27017/offer_store',
-        origin: ['http://localhost:5555', 'http://localhost:4200'],
+        origin: ['http://localhost:5555', 'http://localhost:3000'],
         authCookieName: 'auth_cookie'
     },
     production: {

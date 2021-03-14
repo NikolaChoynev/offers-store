@@ -1,0 +1,19 @@
+.offer {
+    text-align: center;
+    padding: 20px;
+    /* background: gray; */
+    max-width: 30%;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.offer img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.offer h2 {
+    margin: 20px;
+    text-align: left;
+}

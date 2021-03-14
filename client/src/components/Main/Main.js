@@ -1,9 +1,13 @@
 import style from "./Main.module.css";
 
+import Offers from "../Offers";
+
 const Main = () => {
   return (
-    <main>
-      <h1>Active offers</h1>
+    <main className={style.main}>
+      <h1> Active offers </h1>
+
+      <Offers />
     </main>
   );
 };

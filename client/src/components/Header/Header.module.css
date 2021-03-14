@@ -27,11 +27,13 @@
     text-decoration: none;
     background: rgba(0, 0, 0, 0);
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
 .profileUl li a:hover {
     background: rgba(0, 0, 0, 4);
+    border: 1px solid black;
 }
 
 .offersUl {
@@ -48,9 +50,11 @@
     text-decoration: none;
     background: rgba(0, 0, 0, 0);
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
 .offersUl li a:hover {
     background: rgba(0, 0, 0, 4);
+    border: 1px solid black;
 }
