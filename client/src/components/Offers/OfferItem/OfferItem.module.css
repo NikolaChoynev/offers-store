@@ -1,19 +1,42 @@
 .offer {
     text-align: center;
     padding: 20px;
-    /* background: gray; */
     max-width: 30%;
     margin: 20px auto;
     border-radius: 10px;
     border: 2px solid black;
 }
 
+.offer:nth-child(odd) {
+    background-color: rgb(47, 45, 45);
+    color: white;
+}
+
 .offer img {
     width: 100%;
     border-radius: 10px;
+    box-shadow: 0 0 10px 2px black;
 }
 
 .offer h2 {
     margin: 20px;
+    /* text-align: left;s */
+}
+
+.offer .author {
     text-align: left;
+}
+
+.offer a {
+    text-decoration: none;
+    color: green;
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px black;
+}
+
+.offer a:hover {
+    color: red;
+    border: 1px solid red;
 }

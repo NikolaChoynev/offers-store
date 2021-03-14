@@ -5,10 +5,9 @@ const OfferItem = (props) => {
     <div className={style.offer}>
       <h2>{props.offerName}</h2>
       <img src={props.imageUrl} alt="" />
-      <p>{props.offerType}</p>
       <p>{props.description}</p>
       <p><b>{props.price}$</b></p>
-      <p>
+      <p className={style.author}>
         <small>Offer is made by</small>:{props.company}
       </p>
       <a href="#/">Details</a>
