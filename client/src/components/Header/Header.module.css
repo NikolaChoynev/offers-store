@@ -1,0 +1,56 @@
+.header {
+    color: white;
+    background-color: rgb(47, 45, 45);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.profileUl {
+    display: flex;
+}
+
+.profileUl li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.profileUl li a {
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.profileUl li a:hover {
+    background: rgba(0, 0, 0, 4);
+}
+
+.offersUl {
+    display: flex;
+}
+
+.offersUl li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.offersUl li a {
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.offersUl li a:hover {
+    background: rgba(0, 0, 0, 4);
+}
