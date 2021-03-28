@@ -9,12 +9,12 @@ const OfferItem = (props) => {
       <p> {props.description} </p>{" "}
       <p>
         {" "}
-        <b> {props.price}$ </b>
-      </p>
+        <b> {props.price}$ </b>{" "}
+      </p>{" "}
       <p className={style.author}>
         <small> Offer is made by </small>:{props.company}{" "}
       </p>{" "}
-      <Link to={`/details/${props.id}`}> Details </Link>{" "}
+      <Link to={`offers/details/${props.id}`}> Details </Link>{" "}
     </div>
   );
 };

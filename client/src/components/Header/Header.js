@@ -22,7 +22,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/create"
+              to="/offers/create"
               activeStyle={{
                 background: "black",
                 color: "white",
@@ -42,7 +42,7 @@ const Header = () => {
                 color: "white",
               }} exact={true}
             >
-              <i class="fas fa-user"></i> Profile
+              <i className="fas fa-user"></i> Profile
             </NavLink>
           
           </li>
@@ -54,7 +54,7 @@ const Header = () => {
                 color: "white",
               }} exact={true}
             >
-              <i class="fas fa-sign-in-alt"> </i> Login
+              <i className="fas fa-sign-in-alt"> </i> Login
             </NavLink>
           </li>
           <li>
@@ -65,7 +65,7 @@ const Header = () => {
                 color: "white",
               }} exact={true}
             >
-              <i class="fas fa-sign-out-alt"></i> Logout
+              <i className="fas fa-sign-out-alt"></i> Logout
             </NavLink>
             
           </li>
@@ -78,7 +78,7 @@ const Header = () => {
                 color: "white",
               }} exact={true}
             >
-              <i class="fas fa-user-plus"></i> Register
+              <i className="fas fa-user-plus"></i> Register
             </NavLink>
           </li>
         </ul>
