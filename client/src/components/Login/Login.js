@@ -1,26 +1,59 @@
-import style from './Login.module.css';
+import style from "./Login.module.css";
+import * as userServices from "../../services/userServices";
 
-const Login = () => {
-    return (
-        <section className={style.login}>
-            <form action="#" method="post">
-                <fieldset>
-                    <legend>Login</legend>
-                    <p>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email"/>
-                    </p>
-                    
-                    <p>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password"/>
-                    </p>
-                    <input type="submit" name="addOffer" id="addOffer" value="Login" />
-                    
-                </fieldset>
-            </form>
-        </section>
-    );
+const Login = ({ history }) => {
+  const message = "";
+  const onLoginFormSubmitHandler = (e) => {
+    e.preventDefault();
+
+    const password = e.target.password.value;
+    const email = e.target.email.value;
+    const role = e.target.role.value;
+    userServices
+      .login(email, password, role)
+      .then((user) => {
+        message = user.message;
+
+        history.push("/");
+        console.log(user);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  return (
+    <section className={style.login}>
+      <form onSubmit={onLoginFormSubmitHandler}>
+        <fieldset>
+          <legend>Login</legend>
+          <p>
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </p>
+
+          <p>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+          </p>
+          <p>
+            <label htmlFor="role">Role</label>
+            <input
+              type="text"
+              name="role"
+              id="role"
+              placeholder="User/Company"
+            />
+          </p>
+          <input type="submit" name="login" id="login" value="Login" />
+        </fieldset>
+        <p>{message}</p>
+      </form>
+    </section>
+  );
 };
 
 export default Login;

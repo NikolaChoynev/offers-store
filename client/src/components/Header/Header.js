@@ -59,7 +59,7 @@ const Header = () => {
           </li>
           <li>
           <NavLink
-              to="/logout"
+              to="/users/logout"
               activeStyle={{
                 background: "black",
                 color: "white",
@@ -72,7 +72,7 @@ const Header = () => {
           <li>
           
           <NavLink
-              to="/users/register "
+              to="/users/register"
               activeStyle={{
                 background: "black",
                 color: "white",

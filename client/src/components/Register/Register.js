@@ -1,9 +1,28 @@
 import style from "./Register.module.css";
+import * as userServices from "../../services/userServices";
 
-const Register = () => {
+const Register = ({
+    history
+}) => {
+  const onRegisterFormSubmitHandler = (e) => {
+    e.preventDefault();
+
+    const password = e.target.password.value;
+    const email = e.target.email.value;
+    const role = e.target.role.value;
+    const username = e.target.username.value;
+    const address = e.target.address.value;
+    userServices
+      .register(address, email, username, password, role)
+        .then((user) => {
+            history.push('/');
+        console.log(user);
+      }).catch((err) => console.log(err));;
+  };
+
   return (
     <section className={style.register}>
-      <form action="#" method="post">
+      <form onSubmit={onRegisterFormSubmitHandler}>
         <fieldset>
           <legend>Register</legend>
           <p>

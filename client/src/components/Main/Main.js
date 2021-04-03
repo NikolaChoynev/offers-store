@@ -1,6 +1,8 @@
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 import style from "./Main.module.css";
+import * as userServices from "../../services/userServices";
+
 
 import Offers from "../Offers";
 import Details from "../Details";
@@ -17,6 +19,13 @@ const Main = () => {
         <Route path="/offers/create" component={Create} exact />
         <Route path="/users/login" component={Login} exact />
         <Route path="/users/register" component={Register} exact />
+        <Route path="/users/logout" render={props => {
+          userServices.logout().then((message) => {
+            console.log(message);
+          });
+          return <Redirect to="/users/login" />;
+          
+        }} exact />
 
       </Switch>{" "}
     </main>
