@@ -1,0 +1,45 @@
+.register {
+    max-width: 30%;
+    margin: 100px auto;
+}
+
+.register input {
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.register select {
+    max-width: 20%;
+    margin-bottom: 20px;
+}
+
+.register label {
+    font-weight: 600;
+}
+
+.register p {
+    display: flex;
+    flex-direction: column;
+}
+
+.register fieldset {
+    padding: 30px 30px;
+    border-radius: 7px;
+    position: relative;
+    box-shadow: 0px 0px 12px -2px black;
+}
+
+.register fieldset legend {
+    padding: 8px 28px 8px 9px;
+    border: 1.5px solid rgb(143, 137, 137);
+    border-radius: 4px;
+    position: absolute;
+    top: -19px;
+    left: -2px;
+    z-index: 0;
+    background: white;
+    box-shadow: 0px 0px 12px -2px black;
+}

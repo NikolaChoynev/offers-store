@@ -1,0 +1,45 @@
+.login {
+    max-width: 30%;
+    margin: 100px auto;
+}
+
+.login input {
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.login select {
+    max-width: 20%;
+    margin-bottom: 20px;
+}
+
+.login label {
+    font-weight: 600;
+}
+
+.login p {
+    display: flex;
+    flex-direction: column;
+}
+
+.login fieldset {
+    padding: 30px 30px;
+    border-radius: 7px;
+    position: relative;
+    box-shadow: 0px 0px 12px -2px black;
+}
+
+.login fieldset legend {
+    padding: 8px 28px 8px 9px;
+    border: 1.5px solid rgb(143, 137, 137);
+    border-radius: 4px;
+    position: absolute;
+    top: -19px;
+    left: -2px;
+    z-index: 0;
+    background: white;
+    box-shadow: 0px 0px 12px -2px black;
+}
