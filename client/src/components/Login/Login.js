@@ -2,7 +2,6 @@ import style from "./Login.module.css";
 import * as userServices from "../../services/userServices";
 
 const Login = ({ history }) => {
-  const message = "";
   const onLoginFormSubmitHandler = (e) => {
     e.preventDefault();
 
@@ -12,13 +11,12 @@ const Login = ({ history }) => {
     userServices
       .login(email, password, role)
       .then((user) => {
-        message = user.message;
-
         history.push("/");
-        console.log(user);
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("loggedIn", true);
       })
       .catch((err) => console.log(err));
-  };
+    };
 
   return (
     <section className={style.login}>
@@ -50,7 +48,6 @@ const Login = ({ history }) => {
           </p>
           <input type="submit" name="login" id="login" value="Login" />
         </fieldset>
-        <p>{message}</p>
       </form>
     </section>
   );

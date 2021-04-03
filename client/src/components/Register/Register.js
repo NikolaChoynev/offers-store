@@ -15,7 +15,7 @@ const Register = ({
     userServices
       .register(address, email, username, password, role)
         .then((user) => {
-            history.push('/');
+        history.push('/');
         console.log(user);
       }).catch((err) => console.log(err));;
   };

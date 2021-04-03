@@ -21,6 +21,7 @@ const Main = () => {
         <Route path="/users/register" component={Register} exact />
         <Route path="/users/logout" render={props => {
           userServices.logout().then((message) => {
+            localStorage.clear();
             console.log(message);
           });
           return <Redirect to="/users/login" />;
